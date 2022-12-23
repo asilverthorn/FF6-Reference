@@ -1,0 +1,1183 @@
+Chest Data Text, ver. .90
+by Imzogelmo
+
+Generated from the ROM, using Yousei's info
+
+Map descriptions by Corundum
+
+Location 020 ($014): (Narshe, lower town (WoB))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8634 | x2D8834 |  37  |  08  | [$1E40:1]| Item | <E7>Sprint Shoes   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 030 ($01E): (Narshe, all non-shop buildings except classroom (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8639 | x2D8839 |  37  |  1E  | [$1E40:2]| Item |  Elixir            |
+01. | $ED/863E | x2D883E |  4D  |  09  | [$1E40:3]|Empty |  N/A               |
+02. | $ED/8643 | x2D8843 |  4E  |  08  | [$1E40:4]| Item | <E7>Hyper Wrist    |
+03. | $ED/8648 | x2D8848 |  4F  |  08  | [$1E40:5]| Item | <E7>Sneak Ring     |
+04. | $ED/864D | x2D884D |  50  |  08  | [$1E40:6]| Item | <E7>Wall Ring      |
+05. | $ED/8652 | x2D8852 |  4E  |  0A  | [$1E40:7]| Item | <D8>ThiefKnife     |
+06. | $ED/8657 | x2D8857 |  4F  |  0A  | [$1E41:0]| Item | <E7>Earrings       |
+07. | $ED/865C | x2D885C |  50  |  0C  | [$1E41:1]| Gold | 5000 GP            |
+08. | $ED/8661 | x2D8861 |  69  |  0E  | [$1E41:2]| Item |  Elixir            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 038 ($026): (Narshe, caves, before checkpoint / checkpoint / behind Arvis' house (WoR))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8666 | x2D8866 |  41  |  1C  | [$1E41:3]| Item | <E7>Pod Bracelet   |
+01. | $ED/866B | x2D886B |  34  |  21  | [$1E41:4]| Item |  Elixir            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 044 ($02C): (Narshe, moogle cave (WoR))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8670 | x2D8870 |  62  |  35  | [$1E41:5]| Item | <E7>Ribbon         |
+01. | $ED/8675 | x2D8875 |  79  |  2D  | [$1E59:7]| Item | <E7>Moogle Charm   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 050 ($032): (Narshe, cave behind Arvis' house (WoB))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/867A | x2D887A |  41  |  1C  | [$1E41:3]| Item |  Fenix Down        |
+01. | $ED/867F | x2D887F |  34  |  21  | [$1E41:4]| Item |  Sleeping Bag      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 052 ($034): (Narshe, moogle cave (WoB))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8684 | x2D8884 |  62  |  35  | [$1E41:5]| Item | <D9>Rune Edge      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 059 ($03B): (Figaro Castle, miscellaneous rooms (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8689 | x2D8889 |  2B  |  0C  | [$1E41:6]| Item |  Tonic             |
+01. | $ED/868E | x2D888E |  2C  |  0C  | [$1E41:7]| Item |  Antidote          |
+02. | $ED/8693 | x2D8893 |  0B  |  0C  | [$1E42:0]| Item |  Soft              |
+03. | $ED/8698 | x2D8898 |  78  |  0B  | [$1E42:1]| Item |  Fenix Down        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 063 ($03F): (Figaro Castle, lower sub-basement)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/869D | x2D889D |  50  |  0E  | [$1E52:6]| Item |  Ether             |
+01. | $ED/86A2 | x2D88A2 |  52  |  0E  | [$1E52:7]| Item |  X-Potion          |
+02. | $ED/86A7 | x2D88A7 |  56  |  0E  | [$1E53:0]| Item | <DC>Gravity Rod    |
+03. | $ED/86AC | x2D88AC |  58  |  0E  | [$1E53:1]| Item | <E3>Crystal Helm   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 065 ($041): (Figaro Castle, treasury)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/86B1 | x2D88B1 |  44  |  0A  | [$1E53:3]| Item | <D9>Soul Sabre     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 066 ($042): (Figaro Castle, NW treasure room in basement)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/86B6 | x2D88B6 |  03  |  35  | [$1E53:2]| Item | <E3>Regal Crown    |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 068 ($044): (Cave to South Figaro, main cave / short tunnel / east entrance (WoR))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/86BB | x2D88BB |  03  |  12  | [$1E42:2]| Item |  X-Potion          |
+01. | $ED/86C0 | x2D88C0 |  21  |  17  | [$1E4C:1]| Item |  Ether             |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 069 ($045): (Cave to South Figaro, main cave / short tunnel / east exit (WoB post-Celes))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/86C5 | x2D88C5 |  03  |  12  | [$1E42:2]| Item |  X-Potion          |
+01. | $ED/86CA | x2D88CA |  21  |  17  | [$1E4C:1]| Item |  Tincture          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 070 ($046): (Cave to South Figaro, recovery spring / up NW stairs (WoB post-Celes))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/86CF | x2D88CF |  34  |  0E  | [$1E42:3]| Item | <DC>Thunder Rod    |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 072 ($048): (Cave to South Figaro, main cave / short tunnel / east exit (WoB pre-Celes))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/86D4 | x2D88D4 |  03  |  12  | [$1E42:2]| Item |  Fenix Down        |
+01. | $ED/86D9 | x2D88D9 |  21  |  17  | [$1E4C:1]| Item |  Tincture          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 073 ($049): (Cave to South Figaro, recovery spring / up NW stairs (WoB, pre-Celes))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/86DE | x2D88DE |  34  |  0E  | [$1E42:3]| Item |  Tincture          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 074 ($04A): (South Figaro, outdoors (WoR))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/86E3 | x2D88E3 |  16  |  12  | [$1E42:4]| Item |  Fenix Down        |
+01. | $ED/86E8 | x2D88E8 |  20  |  10  | [$1E42:5]| Item |  X-Potion          |
+02. | $ED/86ED | x2D88ED |  0F  |  2D  | [$1E42:6]| Item |  Tent              |
+03. | $ED/86F2 | x2D88F2 |  0F  |  2F  | [$1E42:7]| Item |  Remedy            |
+04. | $ED/86F7 | x2D88F7 |  06  |  1F  | [$1E43:0]| Item |  Revivify          |
+05. | $ED/86FC | x2D88FC |  0E  |  1C  | [$1E43:1]| Item |  Tent              |
+06. | $ED/8701 | x2D8901 |  02  |  2B  | [$1E5C:6]| Item |  Elixir            |
+07. | $ED/8706 | x2D8906 |  0B  |  17  | [$1E5C:7]| Item |  Fenix Down        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 075 ($04B): (South Figaro, outdoors (WoB))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/870B | x2D890B |  16  |  12  | [$1E42:4]| Item |  Fenix Down        |
+01. | $ED/8710 | x2D8910 |  20  |  10  | [$1E42:5]| Item |  Tonic             |
+02. | $ED/8715 | x2D8915 |  0F  |  2D  | [$1E42:6]| Item |  Antidote          |
+03. | $ED/871A | x2D891A |  0F  |  2F  | [$1E42:7]| Item |  Eyedrop           |
+04. | $ED/871F | x2D891F |  06  |  1F  | [$1E43:0]| Item |  Tonic             |
+05. | $ED/8724 | x2D8924 |  0E  |  1C  | [$1E43:1]| Item |  Green Cherry      |
+06. | $ED/8729 | x2D8929 |  02  |  2B  | [$1E5C:6]| Item |  Soft              |
+07. | $ED/872E | x2D892E |  0B  |  17  | [$1E5C:7]| Item |  Warp Stone        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 084 ($054): (South Figaro, clock room and Duncan's basement (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8733 | x2D8933 |  07  |  34  | [$1E43:2]| Gold | 500 GP             |
+01. | $ED/8738 | x2D8938 |  15  |  38  | [$1E43:3]| Gold | 1500 GP            |
+02. | $ED/873D | x2D893D |  0C  |  37  | [$1E43:4]| Gold | 1000 GP            |
+03. | $ED/8742 | x2D8942 |  16  |  37  | [$1E43:5]|Empty |  N/A               |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 086 ($056): (South Figaro, Duncan's house / old man's house / tunnel ends (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8747 | x2D8947 |  0F  |  0A  | [$1E43:6]| Item |  Tonic             |
+01. | $ED/874C | x2D894C |  07  |  1F  | [$1E43:7]| Item |  Elixir            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 087 ($057): (South Figaro, escape tunnel (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8751 | x2D8951 |  20  |  2A  | [$1E44:0]| Item | <E4>Iron Armor     |
+01. | $ED/8756 | x2D8956 |  21  |  38  | [$1E44:1]| Item | <E7>Earrings       |
+02. | $ED/875B | x2D895B |  2F  |  21  | [$1E44:2]| Item | <D9>RegalCutlass   |
+03. | $ED/8760 | x2D8960 |  30  |  21  | [$1E44:3]| Item | <E2>Heavy Shld     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 089 ($059): (South Figaro, hidden "castle-like" sub-basements (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8765 | x2D8965 |  6E  |  31  | [$1E5F:4]| Item | <E7>Hyper Wrist    |
+01. | $ED/876A | x2D896A |  65  |  27  | [$1E5F:5]| Item |  X-Potion          |
+02. | $ED/876F | x2D896F |  65  |  2B  | [$1E5F:6]| Item | <E7>Ribbon         |
+03. | $ED/8774 | x2D8974 |  5C  |  35  | [$1E5F:7]| Item |  Ether             |
+04. | $ED/8779 | x2D8979 |  78  |  35  | [$1E60:0]| Item | <E7>RunningShoes   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 090 ($05A): (Cave to South Figaro, turtle pond / up NW stairs (WoR))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/877E | x2D897E |  34  |  0E  | [$1E42:3]| Item | <E7>Hero Ring      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 094 ($05E): (Sabin's house, indoors)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8783 | x2D8983 |  4A  |  1B  | [$1E44:4]| Item |  Tonic             |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 096 ($060): (Mt. Kolts, lower cliffs, without clouds)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8788 | x2D8988 |  1B  |  0E  | [$1E44:5]| Item |  Tent              |
+01. | $ED/878D | x2D898D |  1C  |  1B  | [$1E44:6]| Item | <D8>Guardian       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 097 ($061): (Mt. Kolts, lower cliffs, with clouds)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8792 | x2D8992 |  1B  |  0E  | [$1E44:5]| Item |  Tent              |
+01. | $ED/8797 | x2D8997 |  1C  |  1B  | [$1E44:6]| Item | <D8>Guardian       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 100 ($064): (Mt. Kolts, all caves except save point (inc. Locke & Rachel flashback))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/879C | x2D899C |  1E  |  21  | [$1E44:7]| Item | <E7>Atlas Armlet   |
+01. | $ED/87A1 | x2D89A1 |  08  |  34  | [$1E45:0]| Item |  Tent              |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 105 ($069): (Narshe, Beginner's House west classroom (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/87A6 | x2D89A6 |  36  |  1C  | [$1E51:4]| Item |  Tonic             |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 106 ($06A): (Narshe, Beginner's House middle classroom (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/87AB | x2D89AB |  36  |  1C  | [$1E51:3]| Item |  Sleeping Bag      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 107 ($06B): (Narshe, Beginner's House east classroom (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/87B0 | x2D89B0 |  36  |  1C  | [$1E51:2]| MiaB |  2-Pack # 0        |
+01. | $ED/87B5 | x2D89B5 |  3D  |  1C  | [$1E51:5]| Item |  Tincture          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 109 ($06D): (Returners' Hideout, main cave)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/87BA | x2D89BA |  1A  |  15  | [$1E45:1]| Item |  Green Cherry      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 110 ($06E): (Returners' Hideout, save point / bedroom / storeroom)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/87BF | x2D89BF |  1C  |  31  | [$1E45:2]| Item |  Fenix Down        |
+01. | $ED/87C4 | x2D89C4 |  2A  |  09  | [$1E45:3]| Item |  Antidote          |
+02. | $ED/87C9 | x2D89C9 |  2B  |  09  | [$1E45:4]| Item |  Tincture          |
+03. | $ED/87CE | x2D89CE |  2B  |  0B  | [$1E45:5]| Item | <E7>True Knight    |
+04. | $ED/87D3 | x2D89D3 |  2B  |  0D  | [$1E45:6]| Item |  Fenix Down        |
+05. | $ED/87D8 | x2D89D8 |  2D  |  0D  | [$1E45:7]| Item | <D8>Air Lancet     |
+06. | $ED/87DD | x2D89DD |  37  |  30  | [$1E46:0]| Item |  Potion            |
+07. | $ED/87E2 | x2D89E2 |  3C  |  13  | [$1E46:1]| Item | <E7>White Cape     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 117 ($075): (Imperial Camp (before Doma is poisoned))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/87E7 | x2D89E7 |  2D  |  05  | [$1E46:2]| Item | <E7>Star Pendant   |
+01. | $ED/87EC | x2D89EC |  0F  |  08  | [$1E5A:2]| Item | <E7>Barrier Ring   |
+02. | $ED/87F1 | x2D89F1 |  13  |  12  | [$1E5A:3]| Item | <E7>MithrilGlove   |
+03. | $ED/87F6 | x2D89F6 |  11  |  12  | [$1E5A:4]| MiaB |  2-Pack # 32       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 123 ($07B): (Doma Castle, all rooms except Cyan's (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/87FB | x2D89FB |  34  |  2F  | [$1E46:3]| Item |  Elixir            |
+01. | $ED/8800 | x2D8A00 |  37  |  05  | [$1E46:4]| Item |  Remedy            |
+02. | $ED/8805 | x2D8A05 |  1C  |  31  | [$1E46:5]| Item |  Fenix Down        |
+03. | $ED/880A | x2D8A0A |  1F  |  32  | [$1E46:6]| Item | <E7>Beads          |
+04. | $ED/880F | x2D8A0F |  21  |  22  | [$1E4C:0]| Item |  X-Potion          |
+05. | $ED/8814 | x2D8A14 |  38  |  2F  | [$1E56:3]| Item |  Ether             |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 124 ($07C): (Doma Castle, Cyan's room (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8819 | x2D8A19 |  21  |  22  | [$1E4C:0]| Item |  X-Potion          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 126 ($07E): (Cyan's Dream, Doma Castle all rooms)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/881E | x2D8A1E |  34  |  2F  | [$1E46:3]| Item |  Elixir            |
+01. | $ED/8823 | x2D8A23 |  37  |  05  | [$1E46:4]| Item |  Remedy            |
+02. | $ED/8828 | x2D8A28 |  1C  |  31  | [$1E46:5]| Item |  Fenix Down        |
+03. | $ED/882D | x2D8A2D |  1F  |  32  | [$1E46:6]| Item | <E7>Beads          |
+04. | $ED/8832 | x2D8A32 |  21  |  22  | [$1E4C:0]| Item |  X-Potion          |
+05. | $ED/8837 | x2D8A37 |  38  |  2F  | [$1E56:3]| Item |  Ether             |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 144 ($090): (Cyan's Dream, Phantom Train first dining car)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/883C | x2D8A3C |  19  |  05  | [$1E57:4]| Item | <E7>Genji Glove    |
+01. | $ED/8841 | x2D8A41 |  0E  |  05  | [$1E57:5]| Item | <E2>Flame Shld     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 146 ($092): (Phantom Train, caboose inner room and engine room (inc. Cyan's Dream))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8846 | x2D8A46 |  14  |  07  | [$1E48:3]| Item |  Tent              |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 147 ($093): (Phantom Train, dining car)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/884B | x2D8A4B |  05  |  05  | [$1E46:7]| Item | <E7>Earrings       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 150 ($096): (Mobliz, cave under soldier's house (only after first Phunbaba fights))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8850 | x2D8A50 |  22  |  31  | [$1E54:7]| Item |  Ether             |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 153 ($099): (Phantom Train, suite rooms and save point car (inc. Cyan's Dream))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8855 | x2D8A55 |  14  |  07  | [$1E47:0]| Item |  Tent              |
+01. | $ED/885A | x2D8A5A |  15  |  07  | [$1E47:1]| Item | <E7>Fairy Ring     |
+02. | $ED/885F | x2D8A5F |  19  |  18  | [$1E47:2]| Item |  Fenix Down        |
+03. | $ED/8864 | x2D8A64 |  18  |  18  | [$1E47:3]| Item | <E7>Sniper Sight   |
+04. | $ED/8869 | x2D8A69 |  17  |  18  | [$1E47:4]| Item |  Fenix Down        |
+05. | $ED/886E | x2D8A6E |  16  |  18  | [$1E5E:3]| MiaB |  2-Pack # 34       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 158 ($09E): (Mobliz, outdoors (WoR))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8873 | x2D8A73 |  09  |  11  | [$1E5F:3]| Item |  Fenix Down        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 163 ($0A3): (Mobliz, mailman's house, upstairs only (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8878 | x2D8A78 |  33  |  0C  | [$1E47:5]| Item |  Elixir            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 171 ($0AB): (Nikeah, inn (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/887D | x2D8A7D |  39  |  25  | [$1E47:6]| Item |  Elixir            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 175 ($0AF): (Serpent Trench, caves)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8882 | x2D8A82 |  34  |  0B  | [$1E47:7]| Item |  X-Potion          |
+01. | $ED/8887 | x2D8A87 |  08  |  0D  | [$1E48:0]| Item | <E3>Green Beret    |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 177 ($0B1): (Mt. Zozo, small cliffside area)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/888C | x2D8A8C |  09  |  07  | [$1E54:6]| Item | <E7>Gold Hairpin   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 179 ($0B3): (Mt. Zozo, all caves except Cyan's)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8891 | x2D8A91 |  13  |  1E  | [$1E54:2]| Item | <E3>Red Cap        |
+01. | $ED/8896 | x2D8A96 |  0B  |  15  | [$1E54:3]| Item | <E2>Ice Shld       |
+02. | $ED/889B | x2D8A9B |  0D  |  10  | [$1E54:4]| Item | <E2>Aegis Shld     |
+03. | $ED/88A0 | x2D8AA0 |  03  |  33  | [$1E54:5]| Item | <E2>Thunder Shld   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 180 ($0B4): (Mt. Zozo, Cyan's cave)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/88A5 | x2D8AA5 |  2A  |  36  | [$1E5D:6]|Empty |  N/A               |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 186 ($0BA): (House at Dragon's Neck, indoors)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/88AA | x2D8AAA |  73  |  22  | [$1E5C:5]| Item | <E7>Hero Ring      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 195 ($0C3): (Kohlingen, crazy man's house, both floors (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/88AF | x2D8AAF |  25  |  35  | [$1E48:1]| Item | <E3>Green Beret    |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 197 ($0C5): (Kohlingen, Rachel's house (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/88B4 | x2D8AB4 |  2A  |  0A  | [$1E48:5]| Item |  Elixir            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 207 ($0CF): (Owzer's house, darkened basement rooms)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/88B9 | x2D8AB9 |  5C  |  3A  | [$1E5A:5]| Item | <E4>Moogle Suit    |
+01. | $ED/88BE | x2D8ABE |  5A  |  2F  | [$1E60:2]| Item | <E7>Relic Ring     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 209 ($0D1): (Owzer's house, upper floor (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/88C3 | x2D8AC3 |  7D  |  0B  | [$1E48:2]| Item |  Tincture          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 225 ($0E1): (Zozo, all rooms except tower top (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/88C8 | x2D8AC8 |  6F  |  34  | [$1E49:1]| Item | <E5>Chain Saw      |
+01. | $ED/88CD | x2D8ACD |  42  |  32  | [$1E49:2]| Item |  Tincture          |
+02. | $ED/88D2 | x2D8AD2 |  53  |  35  | [$1E49:0]| Item |  Tonic             |
+03. | $ED/88D7 | x2D8AD7 |  0B  |  3B  | [$1E49:3]| Item | <E7>Thief Glove    |
+04. | $ED/88DC | x2D8ADC |  23  |  0B  | [$1E49:4]| Item | <E1>Fire Knuckle   |
+05. | $ED/88E1 | x2D8AE1 |  68  |  09  | [$1E5D:7]| Item |  Tincture          |
+06. | $ED/88E6 | x2D8AE6 |  69  |  09  | [$1E5E:0]| Item |  Potion            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 226 ($0E2): (Zozo, room at tower top (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/88EB | x2D8AEB |  48  |  1A  | [$1E48:6]| Item | <E7>RunningShoes   |
+01. | $ED/88F0 | x2D8AF0 |  5C  |  1B  | [$1E48:7]| Item |  X-Potion          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 250 ($0FA): (Imperial Castle, most rooms (including Terra's flashback))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/88F5 | x2D8AF5 |  18  |  30  | [$1E49:5]| Item | <E7>Back Guard     |
+01. | $ED/88FA | x2D8AFA |  19  |  30  | [$1E49:6]| Item |  X-Potion          |
+02. | $ED/88FF | x2D8AFF |  75  |  0C  | [$1E49:7]| Item | <E7>Gale Hairpin   |
+03. | $ED/8904 | x2D8B04 |  64  |  31  | [$1E4A:0]| Item |  Revivify          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 252 ($0FC): (Imperial Castle, western barracks)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8909 | x2D8B09 |  2A  |  37  | [$1E4A:1]| Item |  Tincture          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 262 ($106): (Magitek Factory, first area (first visit / after subway ride))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/890E | x2D8B0E |  03  |  19  | [$1E4A:2]| Item | <D9>Flame Sabre    |
+01. | $ED/8913 | x2D8B13 |  11  |  1B  | [$1E4A:3]| Item |  Tincture          |
+02. | $ED/8918 | x2D8B18 |  07  |  2C  | [$1E4A:4]| Item |  X-Potion          |
+03. | $ED/891D | x2D8B1D |  19  |  34  | [$1E4A:5]| Item |  Remedy            |
+04. | $ED/8922 | x2D8B22 |  0E  |  35  | [$1E4A:6]| Item | <E2>Gold Shld      |
+05. | $ED/8927 | x2D8B27 |  19  |  2C  | [$1E4A:7]| Item | <D9>ThunderBlade   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 263 ($107): (Magitek Factory, second area (only before subway ride))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/892C | x2D8B2C |  05  |  1F  | [$1E4B:0]| Item | <E7>DragoonBoots   |
+01. | $ED/8931 | x2D8B31 |  0E  |  37  | [$1E4B:1]| Item | <E3>Gold Helmet    |
+02. | $ED/8936 | x2D8B36 |  37  |  22  | [$1E4B:2]| Item | <D9>Blizzard       |
+03. | $ED/893B | x2D8B3B |  3C  |  21  | [$1E4B:3]| Item | <E7>Zephyr Cape    |
+04. | $ED/8940 | x2D8B40 |  2A  |  2E  | [$1E4B:4]| Item |  Tent              |
+05. | $ED/8945 | x2D8B45 |  20  |  39  | [$1E4B:5]| Item | <E4>Gold Armor     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 271 ($10F): (Magitek Research Facility, hallway with empty tubes)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/894A | x2D8B4A |  08  |  25  | [$1E4B:6]| Item | <D9>Break Blade    |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 276 ($114): (Gogo's Lair, entrance / guarded bridges / below bridges)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/894F | x2D8B4F |  19  |  1F  | [$1E5A:0]| Item | <E7>FakeMustache   |
+01. | $ED/8954 | x2D8B54 |  28  |  0D  | [$1E5A:1]| Item | <E4>Red Jacket     |
+02. | $ED/8959 | x2D8B59 |  23  |  10  | [$1E58:2]| Item |  Ether             |
+03. | $ED/895E | x2D8B5E |  2A  |  20  | [$1E5D:4]| Item | <DD>Magical Brsh   |
+04. | $ED/8963 | x2D8B63 |  2B  |  20  | [$1E5D:5]| Item | <E4>Genji Armor    |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 280 ($118): (Gogo's Lair, moving ceiling room / chest jumping room)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8968 | x2D8B68 |  01  |  2D  | [$1E5C:4]| Item | <E2>Thunder Shld   |
+01. | $ED/896D | x2D8B6D |  2E  |  2F  | [$1E5D:0]| Item | <E7>Zephyr Cape    |
+02. | $ED/8972 | x2D8B72 |  29  |  2B  | [$1E5D:1]| Item | <E7>Hero Ring      |
+03. | $ED/8977 | x2D8B77 |  1B  |  2C  | [$1E5D:2]| Item | <DE>Tack Star      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 281 ($119): (Umaro's Cave, first cave and bridges cave)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/897C | x2D8B7C |  29  |  3A  | [$1E55:1]| Item | <E7>Gauntlet       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 282 ($11A): (Umaro's Cave, cave north of first cave)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8981 | x2D8B81 |  0E  |  19  | [$1E55:0]| Item |  X-Ether           |
+01. | $ED/8986 | x2D8B86 |  0D  |  22  | [$1E55:2]| MiaB |  2-Pack # 152      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 284 ($11C): (Maranda, outdoors (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/898B | x2D8B8B |  1C  |  14  | [$1E5E:4]| Item |  Remedy            |
+01. | $ED/8990 | x2D8B90 |  02  |  1A  | [$1E5E:5]| Item |  Revivify          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 292 ($124): (Kefka's Tower, switched platform factory area)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8995 | x2D8B95 |  59  |  0C  | [$1E5B:0]| Item | <E7>Ribbon         |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 296 ($128): (Kefka's Tower, catwalk in Inferno's room)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/899A | x2D8B9A |  26  |  0C  | [$1E5C:1]| Item | <E4>Nutkin Suit    |
+01. | $ED/899F | x2D8B9F |  31  |  0C  | [$1E5D:3]| Item | <E7>Gauntlet       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 299 ($12B): (Darill's Tomb, most upstairs rooms / Darill's grave)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/89A4 | x2D8BA4 |  2B  |  2A  | [$1E53:4]| Item | <E3>Genji Helmet   |
+01. | $ED/89A9 | x2D8BA9 |  09  |  3B  | [$1E53:5]| Item | <E4>Crystal Mail   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 300 ($12C): (Darill's Tomb, rooms with visible switches / downstairs rooms)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/89AE | x2D8BAE |  2B  |  3C  | [$1E53:6]| Item | <E4>Czarina Gown   |
+01. | $ED/89B3 | x2D8BB3 |  37  |  3A  | [$1E53:7]| Item | <E7>Exp. Egg       |
+02. | $ED/89B8 | x2D8BB8 |  7C  |  09  | [$1E54:0]| Item | <D8>Man Eater      |
+03. | $ED/89BD | x2D8BBD |  78  |  09  | [$1E54:1]| MiaB |  2-Pack # 116      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 304 ($130): (Kefka's Tower, Fixed Dice room)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/89C2 | x2D8BC2 |  21  |  23  | [$1E5A:7]| Item | <E0>Fixed Dice     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 311 ($137): (Tzen, collapsing house (both floors))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/89C7 | x2D8BC7 |  7B  |  2B  | [$1E51:6]| Item | <DC>Heal Rod       |
+01. | $ED/89CC | x2D8BCC |  68  |  2B  | [$1E51:7]| Item |  Tincture          |
+02. | $ED/89D1 | x2D8BD1 |  66  |  31  | [$1E52:0]| MiaB |  2-Pack # 150      |
+03. | $ED/89D6 | x2D8BD6 |  70  |  31  | [$1E52:1]| Item | <DC>Pearl Rod      |
+04. | $ED/89DB | x2D8BDB |  67  |  3A  | [$1E52:2]| Item | <E7>Hyper Wrist    |
+05. | $ED/89E0 | x2D8BE0 |  7D  |  0C  | [$1E52:3]| Item |  Magicite          |
+06. | $ED/89E5 | x2D8BE5 |  6F  |  0C  | [$1E52:4]| MiaB |  2-Pack # 150      |
+07. | $ED/89EA | x2D8BEA |  76  |  1A  | [$1E52:5]| Item | <D9>Drainer        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 313 ($139): (Phoenix Cave, downstairs)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/89EF | x2D8BEF |  0D  |  14  | [$1E55:3]| Item | <E7>Ribbon         |
+01. | $ED/89F4 | x2D8BF4 |  12  |  0D  | [$1E56:0]|Empty |  N/A               |
+02. | $ED/89F9 | x2D8BF9 |  33  |  25  | [$1E55:6]|Empty |  N/A               |
+03. | $ED/89FE | x2D8BFE |  20  |  2A  | [$1E55:7]|Empty |  N/A               |
+04. | $ED/8A03 | x2D8C03 |  22  |  14  | [$1E57:6]|Empty |  N/A               |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 315 ($13B): (Phoenix Cave, upstairs)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A08 | x2D8C08 |  18  |  2B  | [$1E55:4]| Item | <DF>Wing Edge      |
+01. | $ED/8A0D | x2D8C0D |  32  |  24  | [$1E55:5]|Empty |  N/A               |
+02. | $ED/8A12 | x2D8C12 |  14  |  28  | [$1E56:1]| Item | <E7>Dragon Horn    |
+03. | $ED/8A17 | x2D8C17 |  37  |  35  | [$1E58:3]| Item |  Warp Stone        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 321 ($141): (Cyan's Dream, Phantom Train second dining car)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A1C | x2D8C1C |  18  |  09  | [$1E57:2]| Item |  X-Potion          |
+01. | $ED/8A21 | x2D8C21 |  10  |  08  | [$1E57:3]| Item | <E2>Ice Shld       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 323 ($143): (Albrook, outdoors (WoB, including shadowed by Floating Island))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A26 | x2D8C26 |  38  |  0D  | [$1E4C:2]| Item |  Potion            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 324 ($144): (Albrook, outdoors (WoR))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A2B | x2D8C2B |  38  |  0D  | [$1E4C:2]| Item |  Potion            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 326 ($146): (Albrook, weapon shop (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A30 | x2D8C30 |  0B  |  31  | [$1E4C:4]| Item |  Tincture          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 327 ($147): (Albrook, armor shop (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A35 | x2D8C35 |  5E  |  14  | [$1E4C:5]|Empty |  N/A               |
+01. | $ED/8A3A | x2D8C3A |  5F  |  14  | [$1E4C:6]|Empty |  N/A               |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 330 ($14A): (Albrook, cafe / relic shop (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A3F | x2D8C3F |  23  |  07  | [$1E4C:7]| Item |  Elixir            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 332 ($14C): (Albrook, docks / Magitek ship at sea (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A44 | x2D8C44 |  17  |  02  | [$1E4C:3]| Item |  Warp Stone        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 334 ($14E): (Kefka's Tower, exterior)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A49 | x2D8C49 |  17  |  0E  | [$1E5A:6]| Item | <E3>Coronet        |
+01. | $ED/8A4E | x2D8C4E |  0B  |  27  | [$1E5B:1]| Item | <E2>Force Shld     |
+02. | $ED/8A53 | x2D8C53 |  05  |  33  | [$1E5B:2]| Item | <E4>Force Armor    |
+03. | $ED/8A58 | x2D8C58 |  25  |  2D  | [$1E5B:3]| Item | <DD>Rainbow Brsh   |
+04. | $ED/8A5D | x2D8C5D |  17  |  29  | [$1E5B:4]| Item | <DE>Tack Star      |
+05. | $ED/8A62 | x2D8C62 |  2F  |  28  | [$1E5B:5]| Item | <E3>Red Cap        |
+06. | $ED/8A67 | x2D8C67 |  30  |  30  | [$1E5B:6]| Item |  Megalixir         |
+07. | $ED/8A6C | x2D8C6C |  1D  |  1D  | [$1E5E:2]| Item | <E7>Ribbon         |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 338 ($152): (Kefka's Tower, second group first cave)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A71 | x2D8C71 |  05  |  27  | [$1E5B:7]| Item | <E4>Minerva        |
+01. | $ED/8A76 | x2D8C76 |  3A  |  1B  | [$1E5C:0]| Item | <DE>Tack Star      |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 343 ($157): (Thamasa, outdoors (WoB pre-Espers / Shadow's last dream / "That evening"))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A7B | x2D8C7B |  0D  |  08  | [$1E5E:6]| Item |  Echo Screen       |
+01. | $ED/8A80 | x2D8C80 |  23  |  0C  | [$1E5E:7]| Item |  Green Cherry      |
+02. | $ED/8A85 | x2D8C85 |  2B  |  1E  | [$1E5F:0]| Item |  Soft              |
+03. | $ED/8A8A | x2D8C8A |  1F  |  25  | [$1E5F:1]| Item |  Eyedrop           |
+04. | $ED/8A8F | x2D8C8F |  0E  |  12  | [$1E5F:2]| Item |  Fenix Down        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 349 ($15D): (Thamasa, both floors of Strago's house (always))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A94 | x2D8C94 |  38  |  10  | [$1E5C:3]| Item | <E7>Memento Ring   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 351 ($15F): (Thamasa, inside the burning house)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8A99 | x2D8C99 |  04  |  34  | [$1E4D:0]| Item | <DC>Fire Rod       |
+01. | $ED/8A9E | x2D8C9E |  2D  |  07  | [$1E4D:1]| Item | <DC>Ice Rod        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 353 ($161): (Cave in the Veldt)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8AA3 | x2D8CA3 |  12  |  14  | [$1E57:7]| Item | <E7>Rage Ring      |
+01. | $ED/8AA8 | x2D8CA8 |  06  |  08  | [$1E58:0]| MiaB |  2-Pack # 153      |
+02. | $ED/8AAD | x2D8CAD |  2A  |  1A  | [$1E58:1]| Item | <D8>Striker        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 365 ($16D): (Fanatics' Tower, room on 7th floor)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8AB2 | x2D8CB2 |  07  |  06  | [$1E56:4]| Item | <E7>Safety Bit     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 366 ($16E): (Fanatics' Tower, room at top of tower)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8AB7 | x2D8CB7 |  07  |  07  | [$1E57:0]| Item | <E7>Gem Box        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 367 ($16F): (Fanatics' Tower, room on 16th floor)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8ABC | x2D8CBC |  07  |  06  | [$1E56:5]| Item | <E2>Genji Shld     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 368 ($170): (Fanatics' Tower, room on 25th floor)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8AC1 | x2D8CC1 |  07  |  06  | [$1E56:6]| Item | <D8>Stunner        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 369 ($171): (Fanatics' Tower, room on 34th floor)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8AC6 | x2D8CC6 |  07  |  06  | [$1E56:7]| Item | <E4>Force Armor    |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 370 ($172): (Fanatics' Tower, hidden room on 6th floor)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8ACB | x2D8CCB |  07  |  06  | [$1E57:1]| Item | <E5>Air Anchor     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 372 ($174): (Espers' Gathering Place, cliffside without overlook)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8AD0 | x2D8CD0 |  29  |  22  | [$1E4D:2]| Item |  X-Potion          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 373 ($175): (Espers' Gathering Place, cliffside overlooking waterfall)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8AD5 | x2D8CD5 |  0E  |  09  | [$1E4D:3]| Item | <E4>Tabby Suit     |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 374 ($176): (Espers' Gathering Place, cliffside overlooking mountains)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8ADA | x2D8CDA |  12  |  09  | [$1E4D:4]| Item | <E4>Chocobo Suit   |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 375 ($177): (Espers' Gathering Place, most caves)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8ADF | x2D8CDF |  2E  |  1B  | [$1E4D:5]| Item | <DC>Heal Rod       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 378 ($17A): (Imperial Base near Sealed Gate, indoors)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8AE4 | x2D8CE4 |  32  |  2A  | [$1E4D:6]| Item |  X-Potion          |
+01. | $ED/8AE9 | x2D8CE9 |  33  |  2A  | [$1E4D:7]| Item | <E7>Cherub Down    |
+02. | $ED/8AEE | x2D8CEE |  31  |  2C  | [$1E4E:0]| Gold | 8000 GP            |
+03. | $ED/8AF3 | x2D8CF3 |  33  |  2C  | [$1E4E:1]| Item |  Ether             |
+04. | $ED/8AF8 | x2D8CF8 |  36  |  2C  | [$1E4E:2]| Item | <E7>Wall Ring      |
+05. | $ED/8AFD | x2D8CFD |  38  |  2C  | [$1E4E:3]| Gold | 13000 GP           |
+06. | $ED/8B02 | x2D8D02 |  34  |  2D  | [$1E4E:4]| Item | <E7>RunningShoes   |
+07. | $ED/8B07 | x2D8D07 |  33  |  2E  | [$1E4E:5]| Item |  Elixir            |
+08. | $ED/8B0C | x2D8D0C |  35  |  2E  | [$1E4E:6]| Gold | 20000 GP           |
+09. | $ED/8B11 | x2D8D11 |  31  |  2F  | [$1E4E:7]| Item | <E7>Cure Ring      |
+0A. | $ED/8B16 | x2D8D16 |  32  |  2F  | [$1E4F:0]| Item | <E7>Back Guard     |
+0B. | $ED/8B1B | x2D8D1B |  37  |  2A  | [$1E4F:1]| Item | <D9>Flame Sabre    |
+0C. | $ED/8B20 | x2D8D20 |  38  |  31  | [$1E60:1]| Item |  Elixir            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 382 ($17E): (Cave to the Sealed Gate, first cave)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8B25 | x2D8D25 |  24  |  27  | [$1E4F:2]| Item | <D8>Assassin       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 383 ($17F): (Cave to the Sealed Gate, second cave)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8B2A | x2D8D2A |  30  |  38  | [$1E4F:3]| Item | <DB>Tempest        |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 384 ($180): (Cave to the Sealed Gate, big lava cave / treasure cave / cave before gate)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8B2F | x2D8D2F |  1D  |  17  | [$1E4F:4]| Item |  Ether             |
+01. | $ED/8B34 | x2D8D34 |  2F  |  0B  | [$1E4F:5]| Item | <E7>Genji Glove    |
+02. | $ED/8B39 | x2D8D39 |  58  |  17  | [$1E4F:6]| Item |  Elixir            |
+03. | $ED/8B3E | x2D8D3E |  71  |  06  | [$1E4F:7]| Item |  Magicite          |
+04. | $ED/8B43 | x2D8D43 |  47  |  1E  | [$1E50:0]| Item |  Ether             |
+05. | $ED/8B48 | x2D8D48 |  58  |  35  | [$1E50:1]| Item |  Magicite          |
+06. | $ED/8B4D | x2D8D4D |  59  |  33  | [$1E50:2]| Item |  Ether             |
+07. | $ED/8B52 | x2D8D52 |  5B  |  31  | [$1E50:3]| Item |  Magicite          |
+08. | $ED/8B57 | x2D8D57 |  5C  |  31  | [$1E50:4]| Item | <D9>Atma Weapon    |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 385 ($181): (Cave to the Sealed Gate, lava cave with moving bridges)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8B5C | x2D8D5C |  03  |  08  | [$1E50:5]| Item | <E7>Coin Toss      |
+01. | $ED/8B61 | x2D8D61 |  0E  |  04  | [$1E50:6]| Item |  X-Potion          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 386 ($182): (Cave to the Sealed Gate, save point cave)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8B66 | x2D8D66 |  4D  |  34  | [$1E48:4]| Item |  Tent              |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 393 ($189): (Floating Island, outdoors, dark background (collapsing))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8B6B | x2D8D6B |  67  |  0C  | [$1E51:1]| Item |  Elixir            |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 394 ($18A): (Floating Island, outdoors, with background clouds (normal))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8B70 | x2D8D70 |  23  |  08  | [$1E50:7]| Item | <DB>Murasame       |
+01. | $ED/8B75 | x2D8D75 |  62  |  1F  | [$1E51:0]| Item | <E3>Beret          |
+02. | $ED/8B7A | x2D8D7A |  30  |  0F  | [$1E4B:7]| MiaB |  2-Pack # 37       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 401 ($191): (Cave to Ancient Castle, all caves except save point)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8B7F | x2D8D7F |  37  |  15  | [$1E58:4]| Item |  Ether             |
+01. | $ED/8B84 | x2D8D84 |  2D  |  15  | [$1E58:5]| Item | <DF>Wing Edge      |
+02. | $ED/8B89 | x2D8D89 |  3A  |  2B  | [$1E58:6]| MiaB |  2-Pack # 113      |
+03. | $ED/8B8E | x2D8D8E |  31  |  2E  | [$1E58:7]| Item | <E0>Doom Darts     |
+04. | $ED/8B93 | x2D8D93 |  12  |  1C  | [$1E59:0]| Item |  Magicite          |
+05. | $ED/8B98 | x2D8D98 |  08  |  14  | [$1E59:1]| Item |  X-Potion          |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 406 ($196): (Ancient Castle, all rooms except library and basement)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8B9D | x2D8D9D |  35  |  17  | [$1E59:2]| Item | <E7>Blizzard Orb   |
+01. | $ED/8BA2 | x2D8DA2 |  37  |  17  | [$1E59:3]| Item | <E7>Gold Hairpin   |
+02. | $ED/8BA7 | x2D8DA7 |  0A  |  11  | [$1E59:5]| MiaB |  2-Pack # 95       |
+03. | $ED/8BAC | x2D8DAC |  3B  |  06  | [$1E59:6]| Item | <DC>Punisher       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 408 ($198): (Ancient Castle, library / basement)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8BB1 | x2D8DB1 |  22  |  2B  | [$1E59:4]| Item |  X-Ether           |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 410 ($19A): (Kefka's Tower, third group factory areas (inc. ending - Relm's scene))
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8BB6 | x2D8DB6 |  0A  |  11  | [$1E5C:2]| Item | <E7>Hero Ring      |
+01. | $ED/8BBB | x2D8DBB |  07  |  2A  | [$1E5E:1]| Item | <E2>Aegis Shld     |
+02. | $ED/8BC0 | x2D8DC0 |  26  |  0C  | [$1E5C:1]| Item | <E4>Nutkin Suit    |
+03. | $ED/8BC5 | x2D8DC5 |  31  |  0C  | [$1E5D:3]| Item | <E7>Gauntlet       |
+    +----------+---------+------+------+----------+------+--------------------+
+
+Location 415 ($19F): (<unknown map index>)
+    +----------+---------+------+------+----------+------+--------------------+
+    |  SNES    |   ROM   |Horiz.| Vert.| Encoding | Type | Contents           |
+    | Address  |  Offset | pos. | pos. |[byte:bit]|      |                    |
+    +----------+---------+------+------+----------+------+--------------------+
+00. | $ED/8BCA | x2D8DCA |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+01. | $ED/8BCF | x2D8DCF |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+02. | $ED/8BD4 | x2D8DD4 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+03. | $ED/8BD9 | x2D8DD9 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+04. | $ED/8BDE | x2D8DDE |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+05. | $ED/8BE3 | x2D8DE3 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+06. | $ED/8BE8 | x2D8DE8 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+07. | $ED/8BED | x2D8DED |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+08. | $ED/8BF2 | x2D8DF2 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+09. | $ED/8BF7 | x2D8DF7 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+0A. | $ED/8BFC | x2D8DFC |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+0B. | $ED/8C01 | x2D8E01 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+0C. | $ED/8C06 | x2D8E06 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+0D. | $ED/8C0B | x2D8E0B |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+0E. | $ED/8C10 | x2D8E10 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+0F. | $ED/8C15 | x2D8E15 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+10. | $ED/8C1A | x2D8E1A |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+11. | $ED/8C1F | x2D8E1F |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+12. | $ED/8C24 | x2D8E24 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+13. | $ED/8C29 | x2D8E29 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+14. | $ED/8C2E | x2D8E2E |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+15. | $ED/8C33 | x2D8E33 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+16. | $ED/8C38 | x2D8E38 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+17. | $ED/8C3D | x2D8E3D |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+18. | $ED/8C42 | x2D8E42 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+19. | $ED/8C47 | x2D8E47 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+1A. | $ED/8C4C | x2D8E4C |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+1B. | $ED/8C51 | x2D8E51 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+1C. | $ED/8C56 | x2D8E56 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+1D. | $ED/8C5B | x2D8E5B |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+1E. | $ED/8C60 | x2D8E60 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+1F. | $ED/8C65 | x2D8E65 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+20. | $ED/8C6A | x2D8E6A |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+21. | $ED/8C6F | x2D8E6F |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+22. | $ED/8C74 | x2D8E74 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+23. | $ED/8C79 | x2D8E79 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+24. | $ED/8C7E | x2D8E7E |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+25. | $ED/8C83 | x2D8E83 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+26. | $ED/8C88 | x2D8E88 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+27. | $ED/8C8D | x2D8E8D |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+28. | $ED/8C92 | x2D8E92 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+29. | $ED/8C97 | x2D8E97 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+2A. | $ED/8C9C | x2D8E9C |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+2B. | $ED/8CA1 | x2D8EA1 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+2C. | $ED/8CA6 | x2D8EA6 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+2D. | $ED/8CAB | x2D8EAB |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+2E. | $ED/8CB0 | x2D8EB0 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+2F. | $ED/8CB5 | x2D8EB5 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+30. | $ED/8CBA | x2D8EBA |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+31. | $ED/8CBF | x2D8EBF |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+32. | $ED/8CC4 | x2D8EC4 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+33. | $ED/8CC9 | x2D8EC9 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+34. | $ED/8CCE | x2D8ECE |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+35. | $ED/8CD3 | x2D8ED3 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+36. | $ED/8CD8 | x2D8ED8 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+37. | $ED/8CDD | x2D8EDD |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+38. | $ED/8CE2 | x2D8EE2 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+39. | $ED/8CE7 | x2D8EE7 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+3A. | $ED/8CEC | x2D8EEC |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+3B. | $ED/8CF1 | x2D8EF1 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+3C. | $ED/8CF6 | x2D8EF6 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+3D. | $ED/8CFB | x2D8EFB |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+3E. | $ED/8D00 | x2D8F00 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+3F. | $ED/8D05 | x2D8F05 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+40. | $ED/8D0A | x2D8F0A |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+41. | $ED/8D0F | x2D8F0F |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+42. | $ED/8D14 | x2D8F14 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+43. | $ED/8D19 | x2D8F19 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+44. | $ED/8D1E | x2D8F1E |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+45. | $ED/8D23 | x2D8F23 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+46. | $ED/8D28 | x2D8F28 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+47. | $ED/8D2D | x2D8F2D |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+48. | $ED/8D32 | x2D8F32 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+49. | $ED/8D37 | x2D8F37 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+4A. | $ED/8D3C | x2D8F3C |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+4B. | $ED/8D41 | x2D8F41 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+4C. | $ED/8D46 | x2D8F46 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+4D. | $ED/8D4B | x2D8F4B |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+4E. | $ED/8D50 | x2D8F50 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+4F. | $ED/8D55 | x2D8F55 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+50. | $ED/8D5A | x2D8F5A |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+51. | $ED/8D5F | x2D8F5F |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+52. | $ED/8D64 | x2D8F64 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+53. | $ED/8D69 | x2D8F69 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+54. | $ED/8D6E | x2D8F6E |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+55. | $ED/8D73 | x2D8F73 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+56. | $ED/8D78 | x2D8F78 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+57. | $ED/8D7D | x2D8F7D |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+58. | $ED/8D82 | x2D8F82 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+59. | $ED/8D87 | x2D8F87 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+5A. | $ED/8D8C | x2D8F8C |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+5B. | $ED/8D91 | x2D8F91 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+5C. | $ED/8D96 | x2D8F96 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+5D. | $ED/8D9B | x2D8F9B |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+5E. | $ED/8DA0 | x2D8FA0 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+5F. | $ED/8DA5 | x2D8FA5 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+60. | $ED/8DAA | x2D8FAA |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+61. | $ED/8DAF | x2D8FAF |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+62. | $ED/8DB4 | x2D8FB4 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+63. | $ED/8DB9 | x2D8FB9 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+64. | $ED/8DBE | x2D8FBE |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+65. | $ED/8DC3 | x2D8FC3 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+66. | $ED/8DC8 | x2D8FC8 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+67. | $ED/8DCD | x2D8FCD |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+68. | $ED/8DD2 | x2D8FD2 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+69. | $ED/8DD7 | x2D8FD7 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+6A. | $ED/8DDC | x2D8FDC |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+6B. | $ED/8DE1 | x2D8FE1 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+6C. | $ED/8DE6 | x2D8FE6 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+6D. | $ED/8DEB | x2D8FEB |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+6E. | $ED/8DF0 | x2D8FF0 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+6F. | $ED/8DF5 | x2D8FF5 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+70. | $ED/8DFA | x2D8FFA |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+71. | $ED/8DFF | x2D8FFF |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+72. | $ED/8E04 | x2D9004 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+73. | $ED/8E09 | x2D9009 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+74. | $ED/8E0E | x2D900E |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+75. | $ED/8E13 | x2D9013 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+76. | $ED/8E18 | x2D9018 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+77. | $ED/8E1D | x2D901D |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+78. | $ED/8E22 | x2D9022 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+79. | $ED/8E27 | x2D9027 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+7A. | $ED/8E2C | x2D902C |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+7B. | $ED/8E31 | x2D9031 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+7C. | $ED/8E36 | x2D9036 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+7D. | $ED/8E3B | x2D903B |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+7E. | $ED/8E40 | x2D9040 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+7F. | $ED/8E45 | x2D9045 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+80. | $ED/8E4A | x2D904A |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+81. | $ED/8E4F | x2D904F |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+82. | $ED/8E54 | x2D9054 |  FF  |  FF  | [$1E7F:7]| Gold | 25500 GP           |
+83. | $ED/8E59 | x2D9059 |  FF  |  FF  | [$1E60:0]|Empty |  N/A               |
+84. | $ED/8E5E | x2D905E |  01  |  03  | [$1E40:0]|Empty |  N/A               |
+85. | $ED/8E63 | x2D9063 |  03  |  06  | [$1E40:6]|Empty |  N/A               |
+    +----------+---------+------+------+----------+------+--------------------+
+

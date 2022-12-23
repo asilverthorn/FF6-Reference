@@ -1,0 +1,520 @@
+
+https://www.ff6hacking.com/forums/thread-3478.html
+How to make sketch not suck
+
+Basically applying this logic from elsewhere to sketches:
+C2/2954: 4A           LSR
+C2/2955: BD 41 3B     LDA $3B41,X    (magic power [* 1.5])
+C2/2958: 90 03        BCC $295D      (Branch if not physical attack)
+C2/295A: BD 2C 3B     LDA $3B2C,X    (vigor [* 2])
+C2/295D: 8D AE 11     STA $11AE
+
+
+        #TODO: remove -- give Leafer other abilities
+        self.controls[23].attack_data_array[0] = 212 # Grav Bomb
+        self.controls[23].attack_data_array[1] = 111 # El Nino
+        self.controls[23].attack_data_array[2] = 119 # Kitty
+        self.controls[23].attack_data_array[3] = 205 # Launcher
+        self.enemies.enemies[23].mp = 999 # Give him a bunch of MP
+
+        # Check if any actually have Launcher
+        for control in self.controls:
+            for i in range(4):
+                if control.attack_data_array[i] == 205:
+                    print(f"Launcher found at {control.id} {i}")
+
+
+
+        # Test: modify the targetting byte for Controls
+        # Vanilla: C2/3771: BF C0 6A C4  LDA $C46AC0,X  (get targeting byte)
+        # New subroutine:
+        src = [
+            asm.LDA(0xc46ac0, asm.LNG_X), # displaced command -- get targeting byte
+            asm.AND(0xEF, asm.IMM8), # clear the "Auto Confirm" bit to allow us to hit X
+            asm.RTS()
+        ]
+        space = Write(Bank.C2, src, "Control: clear auto-confirm flag from targeting byte")
+        clear_auto_confirm_addr = space.start_address
+
+        # Call our new subroutine
+        space = Reserve(0x23771, 0x23774, "control: get targeting byte", asm.NOP())
+        space.write(
+            asm.JSR(clear_auto_confirm_addr, asm.ABS)
+        )
+
+
+---- example use on sandhorse near figaro WoR:
+spellpower * 4 + (level * magic * spellpower / 32)
+
+sand storm = 45
+terra magic = 128
+sandhorse magic = 9
+sandhorse magic defense = 155
+
+damage = (damage * (255 - defense) / 256 + 1)
+
+45 * 4 + (3 * 128 * 45 / 32) = 720
+720 * (255 - 155) / 256 + 1 = 282.25 <- if terra spell power
+
+45 * 4 + (3 * 9 * 45 / 32) = 218
+218 * (255 - 155) / 256 + 1 = 86 <- if sandhorse spell power
+
+Telling if Controlling:
+          $3E4D -p----oc
+                p: phantasm status (DoT similar to seize, goes away when you die or get petrified)
+                o: overcast status (turns you into a zombie when you die)
+                c: use control battle menu (currently controlling something)
+
+C2/1201: BD 4D 3E     LDA $3E4D,X    (Bit 0 is set on entity who's Controlling another.
+                                      this is an addition in FF3us to prevent a bug caused
+                                      by Ripplering off the "Spell Chant" status.)
+
+
+    C2/0739: BD B9 32     LDA $32B9,X   (who's Controlling this entity?)
+    C2/073C: C9 FF        CMP #$FF
+    C2/073E: F0 08        BEQ $0748     (branch if nobody controls them)
+    C2/0740: 10 06        BPL $0748     (branch if somebody controls them, and Control
+                                        wasn't flagged to be deactivated)
+    C2/0742: 29 7F        AND #$7F
+    C2/0744: A8           TAY           (put Controller in Y  [Controllee is in X])
+    C2/0745: 20 5B 07     JSR $075B     (clear Control info for the Controller and
+                                        Controllee [this entity])
+    C2/0748: BD B8 32     LDA $32B8,X   (now see who this entity Controls)
+    C2/074B: C9 FF        CMP #$FF
+    C2/074D: F0 0B        BEQ $075A     (branch if they control nobody)
+    C2/074F: 10 09        BPL $075A     (branch if they control somebody, and Control
+                                        wasn't flagged to be deactivated)
+
+
+          $32B8 Target you Control (invalid if msb set)
+          $32B9 Target Controlling you (invalid if msb set)
+
+
+Control
+
+C2/1976: B9 F9 3E     LDA $3EF9,Y
+C2/1979: 89 10        BIT #$10
+C2/197B: F0 0A        BEQ $1987      (Branch if no spell/chant status)
+C2/197D: 20 2E 19     JSR $192E
+C2/1980: B9 B8 32     LDA $32B8,Y    (Get whom this entity controls)
+C2/1983: A8           TAY 
+C2/1984: 4C 54 15     JMP $1554      (Commands code)
+
+
+C2/1987: BB           TYX
+C2/1988: 20 8A 29     JSR $298A      (Load command data, and clear special effect,
+                                      magic power, etc.)
+C2/198B: A9 A6        LDA #$A6
+C2/198D: 8D A9 11     STA $11A9      (Store control in special effect)
+C2/1990: A9 01        LDA #$01
+C2/1992: 1C A2 11     TRB $11A2      (Sets to magical damage)
+C2/1995: A9 20        LDA #$20
+C2/1997: 0C A4 11     TSB $11A4      (Sets unblockable)
+C2/199A: 4C 7B 31     JMP $317B      (entity executes one hit)
+
+
+
+Muddle/Charm/Berserk/Colosseum:
+
+Picks command for Muddled/Charmed/Berserk/Colosseum monsters
+
+    C2/0634: DA           PHX
+    C2/0635: C2 30        REP #$30       (Set 16-bit A, X, & Y)
+    C2/0637: BD F9 1F     LDA $1FF9,X    (Which monster it is)
+    C2/063A: 0A           ASL 
+    C2/063B: 0A           ASL 
+    C2/063C: AA           TAX            (multiply monster # by 4 to index its
+                                        Control/Muddled/Charm/Colosseum attack table)
+    C2/063D: BF 00 3D CF  LDA $CF3D00,X  (Muddled commands 1 and 2)
+    C2/0641: 85 F0        STA $F0
+    C2/0643: BF 02 3D CF  LDA $CF3D02,X  (Muddled commands 3 and 4)
+    C2/0647: 85 F2        STA $F2
+
+
+C2/3438: 20 2F 37     JSR $372F      (regenerate the Control menu.  it will
+                                      account for the MP cost of a spell cast
+                                      this turn, but unfortunately, the call is too
+                                      early to account for actual MP damage/healing/
+                                      draining done by the spell, so the menu will
+                                      lag a turn behind in that respect.)
+
+
+C2/3758: BF 00 3D CF  LDA $CF3D00,X  (get Relm's Control command)
+
+-----------
+Control targetting?
+
+C2/2782: 52 27  (Fight, Morph, Revert, Steal, Capture, Runic, Sketch, Control, Leap, Mimic,
+                 Row, Def, Jump, GP Rain, Possess)
+
+C2/2752: A9 EE        LDA #$EE       (select Spell EEh - Battle)
+C2/2754: 20 66 29     JSR $2966      (go load spell data)
+C2/2757: A5 BB        LDA $BB        (targeting byte as read from $CFFE01 table?)
+C2/2759: 1A           INC        
+C2/275A: D0 05        BNE $2761      (branch if it wasn't FF.. if it was, it's null, so we use
+                                      the spell byte instead)
+C2/275C: AD A0 11     LDA $11A0      (spell aiming byte)
+C2/275F: 85 BB        STA $BB
+C2/2761: AD A2 11     LDA $11A2   
+C2/2764: 48           PHA 
+C2/2765: 29 04        AND #$04       (Isolate bit 2.  This spell bit is used for two properties:
+                                      Bit 2 of $11A2 will be "Hit only (dead XOR undead) targets",
+                                      and Bit 3 of $BA will be "Can Target Dead/Hidden entities".)
+C2/2767: 0A           ASL 
+C2/2768: 04 BA        TSB $BA        (Sets Can Target Dead/Hidden entities)
+C2/276A: A3 01        LDA $01,S      (get $11A2 again)
+C2/276C: 29 10        AND #$10       (Randomize target)
+C2/276E: 0A           ASL 
+C2/276F: 0A           ASL 
+C2/2770: 04 BA        TSB $BA        (Sets randomize target)
+C2/2772: 68           PLA            (get $11A2 again)
+C2/2773: 29 80        AND #$80       (Abort on characters)
+C2/2775: 04 BA        TSB $BA        (Sets abort on characters)
+C2/2777: 60           RTS 
+
+
+Other option -- change the targeting byte here:
+
+C2/376C: BF C5 6A C4  LDA $C46AC5,X  (get MP cost)
+C2/3770: EB           XBA 
+C2/3771: BF C0 6A C4  LDA $C46AC0,X  (get targeting byte)
+C2/3775: FA           PLX            (restore X = monster num * 4)
+C2/3776: 83 01        STA $01,S      (replace zero value on stack from C2/3757 with
+                                      targeting byte)
+C2/3778: 18           CLC            (clear carry)
+
+#in controls.py:
+        # Test: modify the targetting byte for Controls
+        # Vanilla: C2/3771: BF C0 6A C4  LDA $C46AC0,X  (get targeting byte)
+        # New subroutine:
+        src = [
+            asm.LDA(0xc46ac0, asm.LNG_X), # displaced command -- get targeting byte
+            asm.AND(0xEF, asm.IMM8), # clear the "Auto Confirm" bit to allow us to hit X
+            asm.RTS()
+        ]
+        space = Write(Bank.C2, src, "Control: clear auto-confirm flag from targeting byte")
+        clear_auto_confirm_addr = space.start_address
+
+        # Call our new subroutine
+        space = Reserve(0x23771, 0x23774, "control: get targeting byte", asm.NOP())
+        space.write(
+            asm.JSR(clear_auto_confirm_addr, asm.ABS)
+        )
+
+--- test control:
+
+        #TODO: remove -- give Leafer other abilities
+        self.controls[23].attack_data_array[0] = 124 # Ice Rabbit
+        self.controls[23].attack_data_array[1] = 111 # El Nino
+        self.controls[23].attack_data_array[2] = 119 # Kitty
+        self.controls[23].attack_data_array[3] = 109 # Land Slide
+        self.enemies.enemies[23].mp = 999 # Give him a bunch of MP
+
+---- didn't work. 
+
+Note: it's storing the data in $002180, each time wrigin a new value here:
+    $208E-$21C9 Character Spell Lists (4 * 79 items [1 esper + 54 spells + 24 lores], 4 bytes each)
+    -----------
+          $0000 spell index
+          $0001 msb set if spell is disabled (due to low mp)
+          $0002 targetting data
+          $0003 mp cost
+          $208E esper
+          $2092 spell
+          $216A lore
+
+C2/4E2B: 20 17 52     JSR $5217      (X = A DIV 8, A = 2 ^ (A MOD 8) )
+C2/4E2E: 3F 46 4E C2  AND $C24E46,X  (compare to bitfield of commands that need to retarget)
+C2/4E32: F0 04        BEQ $4E38      (Branch if command doesn't need to retarget) 
+C2/4E34: 64 B8        STZ $B8    
+C2/4E36: 64 B9        STZ $B9        (clear targets)
+
+(Data - commands that need to retarget.  8 commands per byte.)
+
+C2/4E46: 80   (Swdtech)
+C2/4E47: 04   (Blitz)
+C2/4E48: 0B   (Rage, Leap, Dance)
+C2/4E49: 00   (Nothing)
+
+-- so, is C2/4e32 branch occurring with these Controlled Dance commands?
+... it did not take the branch ...
+(A = 770e before 4e2b -- which is Control [14])
+B8 = 07, B9 = 00 for kitty <- that's my party.
+B8 = 00, B9 = 08 for land slide vs 1 enemy
+
+
+
+-- may have found it:
+
+C2/593D: 85 B8        STA $B8        (Bits 0-6 = 0.  Bit 7 = 1 if monster caster, 0 if character)
+
+called from:
+C2/5898: A5 BA        LDA $BA
+C2/589A: 89 40        BIT #$40
+C2/589C: D0 1B        BNE $58B9      (Branch if randomize targets)
+
+
+    $BA crxfdioa
+        c: can't target characters
+        r: random target
+        x: can hit dead targets (Quadra Slam, Dragon Horn, etc. ???)
+        f: reflected
+        d: target only dead allies
+        i: no retarget if target becomes invalid
+        o: attacking opposite side only (no friendly targets)
+        a: can't target attacker
+
+Where is $BA being written?
+
+C2/2761: AD A2 11     LDA $11A2   <- populated from spell data
+C2/2764: 48           PHA 
+....
+C2/276A: A3 01        LDA $01,S      (get $11A2 again)
+C2/276C: 29 10        AND #$10       (Randomize target)
+C2/276E: 0A           ASL 
+C2/276F: 0A           ASL 
+C2/2770: 04 BA        TSB $BA        (Sets randomize target)
+
+-- it's loading it in via (Load spell data) @ C2/2966 -- which reads the ROM
+-- $B5 is set to 02 (Magic), not 0E (Control)
+--- MAYBE 3A7C OR 3A7A
+
+
+-- probably need logic like this:
+C2/4F11: AD 7A 3A     LDA $3A7A      (get command #)
+C2/4F14: C9 19        CMP #$19
+C2/4F16: F0 0C        BEQ $4F24      (branch if it's Summon)
+
+---- 
+LDA $3A7A (get the command)
+CMP #$0E  
+BEQ "exit" (Branch if Control)
+... displaced logic from C2/276A - C2/2771 ...
+"exit"
+RTS
+----
+
+Launcher didn't work. It called C2/589C 9x with $BA set to 40
+
+C2/349A set $BA to 50
+---------------------
+Idea: No ATB reset for Controllee?
+
+C2/3B10: 99 A1 3A     STA $3AA1,Y    (flag target's ATB gauge to be reset?)
+C2/3B13: 4C 2F 37     JMP $372F      (generate the Control menu)
+
+
+Telling if Sketching:
+C2/2C22: AD 17 34     LDA $3417      (get Sketcher)
+C2/2C25: 30 01        BMI $2C28      (branch if null)
+
+
+
+Which spells have auto-confirm:
+Storm, SwdTech, Blitzes, Dances, Slots, WallChange 
+
+
+
+
+Enemies with a "Battle" Sketch command:
+
+Source data.py
+
+
+        # Debug printing. TODO: Remove
+        from data.spell_names import id_name
+        for enemy in self.enemies.enemies:
+            if(enemy.sketch_rare == 0xee or enemy.sketch_common == 0xee):
+                sketch_string = ""
+                if(enemy.no_sketch):
+                    sketch_string = "X "
+                rage_string = ""
+                if(enemy.id <= 0xff):
+                    #attack1 is always ee (Battle)
+                    attack2 = self.rages.rages[enemy.id].attack2
+                    rage_string = f"{id_name[attack2]} ({attack2:02x})"
+                sketch_string += f"{enemy.name} ({enemy.id:02x}): {id_name[enemy.sketch_rare]} ({enemy.sketch_rare:02x}) {id_name[enemy.sketch_common]} ({enemy.sketch_common:02x}); {enemy.special_name}; {rage_string}"
+                print(sketch_string)
+
+ 
+
+Guard (00): Battle (ee) Battle (ee); Critical; Special (ef)
+Soldier (01): Scan (18) Battle (ee); Counter; Fire (00)
+Templar (02): Special (ef) Battle (ee); Axe; Fire 2 (05)
+Mag Roader (06): Special (ef) Battle (ee); Wheel; Bio (08)
+Hazer (08): Drain (04) Battle (ee); Invizap; Bolt 2 (07)
+Brawler (0b): Special (ef) Battle (ee); Punch; Stone (9f)
+Over-Mind (0f): Dread (e2) Battle (ee); Wild Touch; Elf Fire (6b)
+Osteosaur (10): Special (ef) Battle (ee); Fossil; X-Zone (12)
+Commander (11): Fire (00) Battle (ee); Grudge; Break (0c)
+Were-Rat (13): Special (ef) Battle (ee); Bite; Poison (03)
+Leafer (17): Special (ef) Battle (ee); Incisor; Special (ef)
+Lobo (19): Special (ef) Battle (ee); Tusk; Special (ef)
+Doberman (1a): Special (ef) Battle (ee); Bite; Special (ef)
+Fidor (1c): Special (ef) Battle (ee); Pounce; Special (ef)
+Dark Wind (28): Special (ef) Battle (ee); Dive; Break (0c)
+Beakor (29): Special (ef) Battle (ee); Duster; Special (ef)
+Hornet (2e): Special (ef) Battle (ee); IronNeedle; Special (ef)
+CrassHoppr (2f): Special (ef) Battle (ee); Wing Snap; Bserk (21)
+Trilium (32): Special (ef) Battle (ee); Bane Touch; Bio (08)
+Trilobiter (36): Special (ef) Battle (ee); PoisonBarb; Special (ef)
+Siegfried (37): Battle (ee) Battle (ee); Knuckles; Flare (0f)
+Nautiloid (38): Special (ef) Battle (ee); Ink; Special (ef)
+Exocite (39): Special (ef) Battle (ee); Scissors; Special (ef)
+Chupon (40): Battle (ee) Battle (ee); Imp Goo; W Wind (16)
+M-TekArmor (42): Tek Laser (b5) Battle (ee); Metal Kick; Tek Laser (b5)
+Vaporite (46): Slow (19) Battle (ee); Cling; Blaze (e4)
+Mover (56): Battle (ee) Disaster (d6); Silencer; Merton (17)
+Buffalax (58): Special (ef) Battle (ee); Riot; Slow 2 (28)
+Sand Ray (5c): Special (ef) Battle (ee); Tail; Special (ef)
+Areneid (5d): Special (ef) Battle (ee); Numb; Special (ef)
+Crawly (62): Special (ef) Battle (ee); Heart Burn; Special (ef)
+Bleary (63): Special (ef) Battle (ee); Slumber; Doom (0d)
+Marshal (64): Special (ef) Battle (ee); Charge; Wind Slash (65)
+Trooper (65): Special (ef) Battle (ee); Swing; Special (ef)
+Ogor (68): Battle (ee) Meteor (13); Zombite; Storm (54)
+Vector Pup (71): Special (ef) Battle (ee); Bite; Special (ef)
+Sewer Rat (73): Special (ef) Battle (ee); Incisor; Special (ef)
+Rhobite (76): Special (ef) Battle (ee); Incisor; Life (30)
+Red Fang (78): Special (ef) Battle (ee); Rabies; Drain (04)
+Bounty Man (79): Special (ef) Battle (ee); Bite; Special (ef)
+Ralph (7b): Special (ef) Battle (ee); Tackle; Special (ef)
+Chitonid (7c): Special (ef) Battle (ee); Carapace; Stop (20)
+Wart Puck (7d): Special (ef) Battle (ee); Yawn; Rasp (1a)
+Cirpius (86): Special (ef) Battle (ee); Beak; Haste2 (27)
+Mind Candy (8c): Special (ef) Battle (ee); SleepSting; Special (ef)
+Primordite (94): Special (ef) Battle (ee); Numblade; Special (ef)
+Cephaler (96): Special (ef) Battle (ee); Husk; Special (ef)
+Maliga (97): Special (ef) Battle (ee); Scissors; Remedy (33)
+Poplium (a2): Slow (19) Battle (ee); Cling; Special (ef)
+Gigantos (ae): Special (ef) Battle (ee); Throat Jab; Magnitude8 (bc)
+Mag Roader (af): Special (ef) Battle (ee); Rush; Mute (1b)
+Slurm (b8): Special (ef) Battle (ee); Dijestive; Slimer (ae)
+StillGoing (ba): Special (ef) Battle (ee); Slip Touch; Osmose (29)
+Outsider (bd): Special (ef) Battle (ee); Ruin; Pearl (0e)
+Sp Forces (c2): Special (ef) Battle (ee); Blow; Safe (1c)
+Commando (c7): Special (ef) Battle (ee); Program 65; Rflect (24)
+Lunaris (ca): Special (ef) Battle (ee); Face Bite; Special (ef)
+Nastidon (ce): Special (ef) Battle (ee); Grab; Blizzard (ba)
+Rinn (cf): Slow (19) Battle (ee); Cling; Fire (00)
+Insecare (d0): Special (ef) Battle (ee); Wing Whisp; Special (ef)
+Bogy (d3): Special (ef) Battle (ee); Oogyboog; Special (ef)
+Prussian (d4): Special (ef) Battle (ee); Bear Hug; Land Slide (6d)
+Punisher (dd): Battle (ee) Battle (ee); Pummel; Bolt 3 (0b)
+Scorpion (e1): Special (ef) Battle (ee); Doom Sting; Poison (03)
+Mag Roader (e7): Special (ef) Battle (ee); Wheel; Haste (1f)
+Bug (e8): Special (ef) Battle (ee); StoneSpine; Stop (20)
+Sea Flower (e9): Special (ef) Battle (ee); Feeler; Sleep (1d)
+1st Class (ef): Special (ef) Battle (ee); Ore Wrench; Stone (9f)
+Mag Roader (f3): Special (ef) Battle (ee); Rush; L.4 Flare (95)
+Wild Rat (f4): Special (ef) Battle (ee); Scratch; Special (ef)
+Gold Bear (f5): Special (ef) Battle (ee); Gouge; Special (ef)
+Innoc (f6): L? Pearl (98) Battle (ee); BrainBlast; Virite (a5)
+Pugs (ff): Battle (ee) Battle (ee); Knife; Special (ef)
+Whelk (100): Special (ef) Battle (ee); Hit;
+Presenter (101): Special (ef) Battle (ee); Hit;
+Vargas (103): Special (ef) Battle (ee); Doom Fist;
+TunnelArmr (104): Special (ef) Battle (ee); Drill;
+GhostTrain (106): Special (ef) Battle (ee); Wheel;
+Dadaluma (107): Special (ef) Battle (ee); Sweep;
+Shiva (108): Special (ef) Battle (ee); Hit;
+Ifrit (109): Special (ef) Battle (ee); Hit;
+Number 024 (10a): Special (ef) Battle (ee); Overflow;
+Number 128 (10b): Special (ef) Battle (ee); Red Feast;
+Inferno (10c): Special (ef) Battle (ee); Sobat;
+Crane (10d): Special (ef) Battle (ee); Iron Ball;
+Crane (10e): Special (ef) Battle (ee); Iron Ball;
+Umaro (10f): Special (ef) Battle (ee); Tackle;
+Umaro (110): Special (ef) Battle (ee); Tackle;
+Guardian (111): Special (ef) Battle (ee); Hit;
+Air Force (113): Special (ef) Battle (ee); Hit;
+Tritoch (114): Special (ef) Battle (ee); Hit;
+Tritoch (115): Special (ef) Battle (ee); Hit;
+FlameEater (116): Special (ef) Battle (ee); Hit;
+AtmaWeapon (117): Special (ef) Battle (ee); Full Power;
+Nerapa (118): Special (ef) Battle (ee); Hit;
+SrBehemoth (119): Special (ef) Battle (ee); Evil Claw;
+Kefka (11a): Special (ef) Battle (ee); Hit;
+Tentacle (11b): Special (ef) Battle (ee); Seize;
+Dullahan (11c): Special (ef) Battle (ee); Morn Star;
+Doom Gaze (11d): Special (ef) Battle (ee); Bane Claw;
+Chadarnook (11e): Special (ef) Battle (ee); Doom Kiss;
+Curley (11f): Special (ef) Battle (ee); Hit;
+Larry (120): Special (ef) Battle (ee); Hit;
+Moe (121): Special (ef) Battle (ee); Hit;
+Wrexsoul (122): Special (ef) Battle (ee); KarmicBlow;
+Hidon (123): Special (ef) Battle (ee); Hit;
+KatanaSoul (124): Special (ef) Battle (ee); SlayerEdge;
+Hidonite (126): Special (ef) Battle (ee); PoisonClaw;
+Doom (127): Special (ef) Battle (ee); Demon Rage;
+Goddess (128): Special (ef) Battle (ee); Hit;
+Poltrgeist (129): Special (ef) Battle (ee); Psychrip;
+Ultros (12c): Special (ef) Battle (ee); Ink;
+Ultros (12d): Special (ef) Battle (ee); Ink;
+Chupon (12f): Special (ef) Battle (ee); Hit;
+Siegfried (131): Special (ef) Battle (ee); Hit;
+Head (134): Special (ef) Battle (ee); Slime;
+Whelk Head (135): Special (ef) Battle (ee); PetriBlast;
+Colossus (136): Special (ef) Battle (ee); Hit;
+CzarDragon (137): Special (ef) Battle (ee); Hit;
+Master Pug (138): Special (ef) Battle (ee); Cleaver;
+Merchant (13a): Special (ef) Battle (ee); Hit;
+B.Day Suit (13b): Special (ef) Battle (ee); Hit;
+Tentacle (13c): Special (ef) Battle (ee); Seize;
+Tentacle (13d): Special (ef) Battle (ee); Seize;
+Tentacle (13e): Special (ef) Battle (ee); Seize;
+RightBlade (13f): Special (ef) Battle (ee); Rapier;
+Left Blade (140): Special (ef) Battle (ee); Slash;
+Rough (141): Special (ef) Battle (ee); Rapier;
+Striker (142): Special (ef) Battle (ee); Slash;
+Tritoch (144): Special (ef) Battle (ee); Hit;
+Laser Gun (145): Special (ef) Battle (ee); Hit;
+Speck (146): Special (ef) Battle (ee); Hit;
+MissileBay (147): Special (ef) Battle (ee); Hit;
+Chadarnook (148): Special (ef) Battle (ee); Hit;
+Kefka (14a): Special (ef) Battle (ee); Hit;
+Ipooh (14d): Special (ef) Battle (ee); Claw;
+Leader (14e): Special (ef) Battle (ee); Axe;
+Grunt (14f): Special (ef) Battle (ee); Hit;
+Skull Drgn (151): Rasp (1a) Battle (ee); Hit;
+Piranha (154): Special (ef) Battle (ee); Hit;
+Rizopas (155): Special (ef) Battle (ee); Bite;
+Specter (156): Special (ef) Battle (ee); Lightning;
+X Short Arm (157): Special (ef) Battle (ee); VacuumWave;
+X Long Arm (158): Special (ef) Battle (ee); Red Claw;
+X Face (159): Special (ef) Battle (ee); Slip Hit;
+X Tiger (15a): Special (ef) Battle (ee); Doom Tusk;
+X Tools (15b): Special (ef) Battle (ee); Hit;
+X Magic (15c): Special (ef) Battle (ee); Hit;
+X Hit (15d): Special (ef) Battle (ee); 10 Hits;
+X Girl (15e): Special (ef) Battle (ee); Calmness;
+X Sleep (15f): Special (ef) Battle (ee); Calmness;
+Hidonite (160): Special (ef) Battle (ee); Confuclaw;
+Hidonite (161): Special (ef) Battle (ee); Zombi Claw;
+Hidonite (162): Special (ef) Battle (ee); Mega Claw;
+MagiMaster (166): Battle (ee) Battle (ee); Hit;
+SoulSaver (167): Special (ef) Battle (ee); MagicDrain;
+Ultros (168): Special (ef) Battle (ee); OctopusInk;
+Naughty (169): Special (ef) Battle (ee); Hit;
+Phunbaba (16a): Special (ef) Battle (ee); Solar Plex;
+Phunbaba (16b): Special (ef) Battle (ee); Solar Plex;
+Phunbaba (16c): Special (ef) Battle (ee); Solar Plex;
+Phunbaba (16d): Special (ef) Battle (ee); Solar Plex;
+ (16e): Special (ef) Battle (ee); Hit;
+ (16f): Special (ef) Battle (ee); Hit;
+X  (170): Special (ef) Battle (ee); Hit;
+Zone Eater (171): Special (ef) Battle (ee); Hit;
+X  (172): Special (ef) Battle (ee); Hit;
+X  (173): Special (ef) Battle (ee); Hit;
+X  (174): Special (ef) Battle (ee); Hit;
+Officer (175): Special (ef) Battle (ee); Hit;
+Cadet (176): Special (ef) Battle (ee); Axe;
+X  (177): Special (ef) Battle (ee); Hit;
+X  (178): Special (ef) Battle (ee); Hit;
+X Soldier (179): Special (ef) Battle (ee); Hit;
+X  (17a): Special (ef) Battle (ee); Hit;
+X  (17b): Special (ef) Battle (ee); Hit;
+X  (17c): Special (ef) Battle (ee); Hit;
+Atma (17d): Special (ef) Battle (ee); Hit;
+X  (17e): Special (ef) Battle (ee); Hit;
+X  (17f): Special (ef) Battle (ee); Hit;

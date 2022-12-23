@@ -1,0 +1,74 @@
+Name,PDef,MDef
+Buckler,16,10
+Heavy Shld,22,14
+Mithril Shld,27,18
+Gold Shld,34,23
+Aegis Shld,46,52
+Diamond Shld,40,27
+Flame Shld,41,28
+Ice Shld,42,28
+Thunder Shld,43,28
+Crystal Shld,50,34
+Genji Shld,54,50
+TortoiseShld,66,66
+Cursed Shld,0,0
+Paladin Shld,59,59
+Force Shld,0,70
+Leather Hat,11,7
+Hair Band,12,8
+Plumed Hat,14,9
+Beret,21,21
+Magus Hat,15,16
+Bandana,16,10
+Iron Helmet,18,12
+Coronet,23,23
+Bard's Hat,19,21
+Green Beret,19,13
+Head Band,16,10
+Mithril Helm,20,13
+Tiara,22,20
+Gold Helmet,22,15
+Tiger Mask,21,13
+Red Cap,24,17
+Mystery Veil,24,25
+Circlet,25,19
+Regal Crown,28,23
+Diamond Helm,27,18
+Dark Hood,26,17
+Crystal Helm,29,19
+Oath Veil,32,31
+Cat Hood,33,33
+Genji Helmet,36,38
+Thornlet,38,0
+Titanium,42,42
+LeatherArmor,28,19
+Cotton Robe,32,21
+Kung Fu Suit,34,23
+Iron Armor,40,27
+Silk Robe,39,29
+Mithril Vest,45,30
+Ninja Gear,47,32
+White Dress,47,35
+Mithril Mail,51,34
+Gaia Gear,53,43
+Mirage Vest,48,36
+Gold Armor,55,37
+Power Sash,52,35
+Light Robe,60,43
+Diamond Vest,65,44
+Red Jacket,78,55
+Force Armor,69,68
+DiamondArmor,70,47
+Dark Gear,68,46
+Tao Robe,68,50
+Crystal Mail,72,49
+Czarina Gown,70,64
+Genji Armor,90,80
+Imp's Armor,100,100
+Minerva,88,70
+Tabby Suit,54,36
+Chocobo Suit,56,38
+Moogle Suit,58,52
+Nutkin Suit,86,67
+BehemothSuit,94,73
+Snow Muffler,128,90
